@@ -6,7 +6,29 @@
   <name>PDF-MERGE</name>
   <version>1.0.0</version>
   <description>Programa que recebe arquivos pdf e concatena os mesmos</description>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/geckel123/pdf-merge</url>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/geckel123/pdf-merge/issues</url>
+  </issueManagement>
+  <developers>
+    <developer>
+      <id>geckel</id>
+      <name>Giancarlo Eckel</name>
+      <email>geckel@gmail.com</email>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>BSD 2</name>
+      <url>https://opensource.org/licenses/BSD-2-Clause</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git@github.com:entelgy-brasil/zucchini-liferay.git</connection>
+    <developerConnection>scm:git:git@github.com:entelgy-brasil/zucchini-liferay.git</developerConnection>
+    <url>git@github.com:entelgy-brasil/zucchini-liferay.git</url>
+  </scm>
   <build>
     <finalName>pdf-merge</finalName>
     <plugins>
@@ -67,6 +89,18 @@
       <url>https://repo1.maven.org/maven2</url>
     </repository>
   </repositories>
+  <distributionManagement>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Sonatype Nexus release repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus snapshot repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <properties>
     <jdk.version>1.8</jdk.version>
   </properties>
