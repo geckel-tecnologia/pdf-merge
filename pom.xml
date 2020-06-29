@@ -73,16 +73,17 @@
 		</plugins>
 	</build>
 
-	<distributionManagement>
+	<repositories>
 		<repository>
-			<id>nexus</id>
-			<url>${nexus.libsReleasesLocalUrl}/</url>
+			<id>central</id>
+			<name>Maven Central</name>
+			<layout>default</layout>
+			<url>https://repo1.maven.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<url>${nexus.libsSnapshotsLocalUrl}</url>
-		</snapshotRepository>
-	</distributionManagement>
+	</repositories>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.lowagie/itext -->

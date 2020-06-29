@@ -4,7 +4,7 @@
   <groupId>br.com.geckel</groupId>
   <artifactId>pdf-merge</artifactId>
   <name>PDF-MERGE</name>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <description>Programa que recebe arquivos pdf e concatena os mesmos</description>
   <url>http://maven.apache.org</url>
   <build>
@@ -57,16 +57,16 @@
       </plugin>
     </plugins>
   </build>
-  <distributionManagement>
+  <repositories>
     <repository>
-      <id>nexus</id>
-      <url>${nexus.libsReleasesLocalUrl}/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Maven Central</name>
+      <url>https://repo1.maven.org/maven2</url>
     </repository>
-    <snapshotRepository>
-      <id>nexus</id>
-      <url>${nexus.libsSnapshotsLocalUrl}</url>
-    </snapshotRepository>
-  </distributionManagement>
+  </repositories>
   <properties>
     <jdk.version>1.8</jdk.version>
   </properties>
