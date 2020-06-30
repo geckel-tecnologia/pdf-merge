@@ -4,7 +4,7 @@
   <groupId>br.com.geckel</groupId>
   <artifactId>pdf-merge</artifactId>
   <name>PDF-MERGE</name>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <description>Programa que recebe arquivos pdf e concatena os mesmos</description>
   <url>https://github.com/geckel123/pdf-merge</url>
   <issueManagement>
@@ -25,14 +25,21 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git@github.com:geckel123/pdf-merge.git</connection>
-    <developerConnection>scm:git@github.com:geckel123/pdf-merge.git</developerConnection>
-    <tag>v1.0.0</tag>
-    <url>git@github.com:geckel123/pdf-merge.git</url>
+    <connection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</developerConnection>
+    <tag>pdf-merge-1.0.0</tag>
+    <url>https://github.com/geckel123/pdf-merge</url>
   </scm>
   <build>
     <finalName>pdf-merge</finalName>
     <plugins>
+      <plugin>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.11.2</version>
+        <configuration>
+          <connectionType>developerConnection</connectionType>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-eclipse-plugin</artifactId>
         <version>2.9</version>
@@ -133,7 +140,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.5</version>
+            <version>${maven-gpg-plugin.version}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
