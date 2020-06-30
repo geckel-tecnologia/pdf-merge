@@ -4,7 +4,7 @@
   <groupId>br.com.geckel</groupId>
   <artifactId>pdf-merge</artifactId>
   <name>PDF-MERGE</name>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <description>Programa que recebe arquivos pdf e concatena os mesmos</description>
   <url>https://github.com/geckel123/pdf-merge</url>
   <issueManagement>
@@ -77,6 +77,23 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>${maven-gpg-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <homedir>${gpg.homedir}</homedir>
+              <passphrase>${gpg.passphrase}</passphrase>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <repositories>
@@ -102,6 +119,7 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
+    <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
     <jdk.version>1.8</jdk.version>
   </properties>
 </project>
