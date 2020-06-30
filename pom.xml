@@ -3,7 +3,7 @@
 	<groupId>br.com.geckel</groupId>
 	<artifactId>pdf-merge</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>PDF-MERGE</name>
 	<description>Programa que recebe arquivos pdf e concatena os mesmos</description>
 
@@ -19,8 +19,8 @@
 
 	<scm>
 		<url>https://github.com/geckel123/pdf-merge</url>
-		<connection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</developerConnection>
+		<connection>scm:git://git@github.com:geckel123/pdf-merge.git</connection>
+		<developerConnection>scm:git:S//git@github.com:geckel123/pdf-merge.git</developerConnection>
 		<tag>pdf-merge-1.0.0</tag>
 	</scm>
 	<licenses>
