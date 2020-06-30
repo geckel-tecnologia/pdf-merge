@@ -5,12 +5,12 @@
 	<groupId>br.com.geckel</groupId>
 	<artifactId>pdf-merge</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>PDF-MERGE</name>
 	<description>Programa que recebe arquivos pdf e concatena os mesmos</description>
 
 	<url>https://github.com/geckel123/pdf-merge</url>
-	
+
 	<developers>
 		<developer>
 			<id>geckel</id>
@@ -21,8 +21,8 @@
 
 	<scm>
 		<url>https://github.com/geckel123/pdf-merge</url>
-		<connection>scm:git:git@github.com:geckel123/pdf-merge.git</connection>
-		<developerConnection>scm:git@github.com:geckel123/pdf-merge.git</developerConnection>
+		<connection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</developerConnection>
 		<tag>v1.0.0</tag>
 	</scm>
 	<licenses>
@@ -61,6 +61,14 @@
 	<build>
 		<finalName>pdf-merge</finalName>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.11.2</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
 			<!-- download source code in Eclipse, best practice -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
