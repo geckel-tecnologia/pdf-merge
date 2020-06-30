@@ -19,8 +19,8 @@
 
 	<scm>
 		<url>https://github.com/geckel123/pdf-merge</url>
-		<connection>scm:git://git@github.com:geckel123/pdf-merge.git</connection>
-		<developerConnection>scm:git://git@github.com:geckel123/pdf-merge.git</developerConnection>
+		<connection>scm:git:git@github.com:geckel123/pdf-merge.git</connection>
+		<developerConnection>scm:git:git@github.com:geckel123/pdf-merge.git</developerConnection>
 		<tag>pdf-merge-1.0.0</tag>
 	</scm>
 	<licenses>
