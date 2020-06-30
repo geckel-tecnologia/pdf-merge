@@ -10,6 +10,7 @@
 	<description>Programa que recebe arquivos pdf e concatena os mesmos</description>
 
 	<url>https://github.com/geckel123/pdf-merge</url>
+	
 	<developers>
 		<developer>
 			<id>geckel</id>
@@ -19,7 +20,7 @@
 	</developers>
 
 	<scm>
-		<url>git@github.com:geckel123/pdf-merge.git</url>
+		<url>https://github.com/geckel123/pdf-merge</url>
 		<connection>scm:git:git@github.com:geckel123/pdf-merge.git</connection>
 		<developerConnection>scm:git@github.com:geckel123/pdf-merge.git</developerConnection>
 		<tag>v1.0.0</tag>
