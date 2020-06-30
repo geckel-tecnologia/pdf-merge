@@ -20,7 +20,7 @@
 		<url>git@github.com:geckel123/pdf-merge.git</url>
 		<connection>scm:git:git@github.com:geckel123/pdf-merge.git</connection>
 		<developerConnection>scm:git@github.com:geckel123/pdf-merge.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v.1.0.0</tag>
 	</scm>
 	<licenses>
 		<license>
