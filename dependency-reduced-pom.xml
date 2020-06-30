@@ -24,22 +24,9 @@
       <url>https://opensource.org/licenses/BSD-2-Clause</url>
     </license>
   </licenses>
-  <scm>
-    <connection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:geckel123/pdf-merge.git</developerConnection>
-    <tag>pdf-merge-1.0.0</tag>
-    <url>https://github.com/geckel123/pdf-merge</url>
-  </scm>
   <build>
     <finalName>pdf-merge</finalName>
     <plugins>
-      <plugin>
-        <artifactId>maven-scm-plugin</artifactId>
-        <version>1.11.2</version>
-        <configuration>
-          <connectionType>developerConnection</connectionType>
-        </configuration>
-      </plugin>
       <plugin>
         <artifactId>maven-eclipse-plugin</artifactId>
         <version>2.9</version>
@@ -54,52 +41,6 @@
         <configuration>
           <source>${jdk.version}</source>
           <target>${jdk.version}</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>${maven-source-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${maven-javadoc-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>${maven-resources-plugin.version}</version>
-        <configuration>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>${maven-release-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>${nexus-staging-maven-plugin.version}</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
       <plugin>
@@ -133,32 +74,6 @@
       </plugin>
     </plugins>
   </build>
-  <profiles>
-    <profile>
-      <id>sign-artifacts</id>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>${maven-gpg-plugin.version}</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-                <configuration>
-                  <homedir>${gpg.homedir}</homedir>
-                  <passphrase>${gpg.passphrase}</passphrase>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
   <repositories>
     <repository>
       <snapshots>
@@ -169,27 +84,9 @@
       <url>https://repo1.maven.org/maven2</url>
     </repository>
   </repositories>
-  <distributionManagement>
-    <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Sonatype Nexus release repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus snapshot repository</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
-    <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
-    <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
     <jdk.version>1.8</jdk.version>
-    <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
     <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
-    <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
-    <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
-    <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
   </properties>
 </project>
 
